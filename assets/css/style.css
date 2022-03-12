@@ -1,0 +1,101 @@
+/*======================== Font imports ======================================*/
+
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+
+/* ================================= Color variables =========================================*/
+:root {
+    --primary-color: yellow;
+    --bg-color: #d5dfdf;
+    --black: #000;
+    --white: #fff;
+}
+
+/* ============================ Selections & All =====================================*/
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+::selection {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+::moz-selection {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+
+body {
+    display: flex;
+    background-color: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*============================== Card Components ========================================*/
+
+.__container {
+    margin: 10px auto;
+}
+
+.__card {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 700px;
+}
+
+.__card .__course_info {
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.__card .__course_content img {
+    background-color: yellow;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png") no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.__course_info h2 {
+    margin: 2px 10px;
+    font-size: 22px;
+}
+
+.__course_info h6 {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0.3;
+    text-transform: uppercase;
+}
+.__card .__course_content {
+    padding: 10px;
+}
+
+
+/*==================== Media Queries ============================*/
+
+@media screen and (max-width:600px)  {
+    .__card {
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .__card {
+        width: 90%;
+    }
+}
